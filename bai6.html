@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai6</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let run = 0, count = 0, total = 0;
+		while(true){
+			if(run%7==0){
+				total+=run;
+				count++;
+			}
+			run++;
+			if(count==30){
+				break;
+			}
+		}
+		alert("Tổng 30 số đầu chia hết cho 7 là " + total);
+	</script>
+</body>
+</html>

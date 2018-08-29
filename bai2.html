@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let run = true;
+		while(run){
+			let input = prompt("Mời nhập vào nhiệt độ: (gõ exit để thoát)");
+			if(input=="exit"){
+				run = false;
+			}else if(Number(input)>100){
+				alert("Nhiệt độ nóng quá, hạ bớt đi!!! ");
+			}else if(Number(input)<20){
+				alert("Nhiệt độ hơi lạnh, tăng đi em ");
+			}else{
+				alert("Nhiệt độ bình thường rồi, thế nhé");
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bai 8</title>
+    <style type="text/css">
+    #container {
+        width: 30%;
+        height: 200px;
+        margin: 40px auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <button id="btn">
+            Chơi
+        </button>
+        <h1>Bấm <strong>F12</strong> để xem số random của hệ thống</h1>
+    </div>
+    <script type="text/javascript">
+    let btn = document.getElementById("btn");
+    let input1 = 0,input2=0;
+    btn.addEventListener('click', function() {
+        let count = 2;
+        input1 = Number(prompt("Nhập khoảng số bạn muốn dự đoán!!(từ 0) "));
+        
+        let randomNum = parseInt(Math.random() * input1);
+        console.log("Random number: " + randomNum);
+        while (count >= 0) {
+        	input2 = Number(prompt("Nhập số bạn dự đoán!!(từ 0)"));
+            if (input2 < 0 || input2 > input1) {
+                alert("Bạn chọn không đúng khoảng random, mời bạn chọn lại khoảng số từ 0 cho đến " + input1 + ", bạn còn " + count+ " lượt chọn");
+                count--;
+            } else if (input2 == randomNum) {
+                alert("Chúc mừng bạn đã đoán đúng, số ngẫu nhiên của hệ thống là " +
+                    randomNum);
+                break;
+            } else {
+                alert("Rất tiếc, bạn chọn số không chính xác, bạn có thêm " +
+                    count + " lần chọn nữa ");
+                count--;
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>
